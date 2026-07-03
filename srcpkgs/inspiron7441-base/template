@@ -1,0 +1,21 @@
+# Template file for 'inspiron7441-base'
+pkgname=inspiron7441-base
+version=0.1
+revision=1
+archs="aarch64*"
+depends="linux linux-firmware-qualcomm alsa-ucm-conf"
+short_desc="Void Linux Dell Inspiron 14 Plus 7441 platform package"
+maintainer="vpikulik <v.pikulik@gmail.com>"
+license="Public Domain"
+homepage="https://www.voidlinux.org"
+conf_files="/etc/mkinitcpio.conf.d/inspiron7441.conf"
+
+# linux-firmware does not currently ship all board-specific remoteproc/GPU blobs
+# for this machine. The dracut/mkinitcpio snippets below add them to the initramfs
+# only when users provide them locally under /usr/lib/firmware/qcom/x1e80100/dell/
+# inspiron-14-plus-7441/.
+
+do_install() {
+	vinstall "${FILESDIR}"/dracut.conf 644 usr/lib/dracut/dracut.conf.d inspiron7441.conf
+	vinstall "${FILESDIR}"/mkinitcpio.conf 644 etc/mkinitcpio.conf.d inspiron7441.conf
+}
