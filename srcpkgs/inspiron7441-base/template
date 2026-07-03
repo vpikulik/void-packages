@@ -1,7 +1,7 @@
 # Template file for 'inspiron7441-base'
 pkgname=inspiron7441-base
 version=0.1
-revision=1
+revision=2
 archs="aarch64*"
 depends="linux linux-firmware-qualcomm alsa-ucm-conf"
 short_desc="Void Linux Dell Inspiron 14 Plus 7441 platform package"
