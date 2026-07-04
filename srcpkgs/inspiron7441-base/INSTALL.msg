@@ -14,4 +14,5 @@ Expected files:
 - qcvss8380.mbn
 
 The package will include any of the above that already exist locally in the
-initramfs, along with qcom/gen80100_sqe.fw and qcom/gen80100_gmu.bin.
+initramfs, along with qcom/gen80100_sqe.fw, qcom/gen80100_aqe.fw,
+qcom/gen80100_gmu.bin, and qcom/x1e80100/gen70500_zap.mbn.
