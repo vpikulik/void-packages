@@ -18,4 +18,6 @@ conf_files="/etc/mkinitcpio.conf.d/inspiron7441.conf"
 do_install() {
 	vinstall "${FILESDIR}"/dracut.conf 644 usr/lib/dracut/dracut.conf.d inspiron7441.conf
 	vinstall "${FILESDIR}"/mkinitcpio.conf 644 etc/mkinitcpio.conf.d inspiron7441.conf
+	vinstall "${FILESDIR}"/99inspiron7441-logs/module-setup.sh 755 usr/lib/dracut/modules.d/99inspiron7441-logs module-setup.sh
+	vinstall "${FILESDIR}"/99inspiron7441-logs/save-logs.sh 755 usr/lib/dracut/modules.d/99inspiron7441-logs save-logs.sh
 }
