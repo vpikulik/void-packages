@@ -8200,7 +8200,7 @@ CONFIG_DRM_SUN8I_TCON_TOP=m
 #
 CONFIG_DRM_SYSFB_HELPER=m
 # CONFIG_DRM_EFIDRM is not set
-CONFIG_DRM_SIMPLEDRM=m
+# CONFIG_DRM_SIMPLEDRM is not set
 # end of Drivers for system framebuffers
 
 CONFIG_DRM_TEGRA=m
