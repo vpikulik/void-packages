@@ -1,0 +1,16 @@
+# Template file for 'microsoft-surface-7-base'
+pkgname=microsoft-surface-7-base
+version=1
+revision=1
+archs="aarch64*"
+depends="linux linux-firmware-qualcomm alsa-ucm-conf"
+short_desc="Void Linux Microsoft Surface Laptop 7 platform package"
+maintainer="classabbyamp <void@placeviolette.net>"
+license="Public Domain"
+homepage="https://www.voidlinux.org"
+conf_files="/etc/mkinitcpio.conf.d/microsoft-surface-7.conf"
+
+do_install() {
+	vinstall "${FILESDIR}"/dracut.conf 644 usr/lib/dracut/dracut.conf.d microsoft-surface-7.conf
+	vinstall "${FILESDIR}"/mkinitcpio.conf 644 etc/mkinitcpio.conf.d microsoft-surface-7.conf
+}
